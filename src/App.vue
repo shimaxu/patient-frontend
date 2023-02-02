@@ -1,25 +1,14 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import AppNav from "@/components/ui/AppNav.vue";
 </script>
 
 <template>
-  <div class="ml-5 mr-5">
-    <header>
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="@/assets/logo.svg"
-        width="125"
-        height="125"
-      />
+  <header class="mb-5">
+    <AppNav></AppNav>
+  </header>
 
-      <nav class="space-x-5 bg-gray-100 rounded-lg p-5 mt-5">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/addresses">Addresses</RouterLink>
-        <RouterLink to="/patients">Patients</RouterLink>
-      </nav>
-    </header>
-
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <RouterView />
   </div>
 </template>
